@@ -11,7 +11,7 @@ import (
 func main() {
 	n := maelstrom.NewNode()
 
-	mr := repositories.NewMessageRepositoryInMemory()
+	mr := repositories.NewMessageRepositoryInMemoryMutex(repositories.NewMessageRepositoryInMemory())
 	tr := repositories.NewTopologyRepositoryInMemory()
 
 	n.Handle("topology", handlers.TopologyMessageFactory(n, tr))
