@@ -18,6 +18,6 @@ func (repo *TopologyRepositoryInMemorySync) Add(value string) {
 	repo.original.Add(value)
 }
 
-func (repo *TopologyRepositoryInMemorySync) Get() []string {
-	return repo.original.Get()
+func (repo *TopologyRepositoryInMemorySync) Neighbours() []string {
+	return repo.original.Neighbours()
 }

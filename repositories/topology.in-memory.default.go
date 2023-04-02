@@ -12,6 +12,6 @@ func (tr *TopologyRepositoryInMemory) Add(value string) {
 	tr.values = append(tr.values, value)
 }
 
-func (tr *TopologyRepositoryInMemory) Get() []string {
+func (tr *TopologyRepositoryInMemory) Neighbours() []string {
 	return tr.values
 }

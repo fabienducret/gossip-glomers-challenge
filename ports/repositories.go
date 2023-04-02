@@ -8,5 +8,5 @@ type MessageRepository interface {
 
 type TopologyRepository interface {
 	Add(value string)
-	Get() []string
+	Neighbours() []string
 }

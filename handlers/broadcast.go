@@ -8,7 +8,7 @@ import (
 )
 
 func sendToNeighbours(n *maelstrom.Node, body map[string]any, tr ports.TopologyRepository) {
-	neighbours := tr.Get()
+	neighbours := tr.Neighbours()
 
 	for _, neighbour := range neighbours {
 		n.RPC(neighbour, body, nil)
