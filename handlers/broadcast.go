@@ -22,7 +22,7 @@ func BroadcastMessageFactory(n *maelstrom.Node, mr ports.MessageRepository, tr p
 			return err
 		}
 
-		message := body["message"]
+		message := int(body["message"].(float64))
 
 		if mr.Contains(message) {
 			return nil

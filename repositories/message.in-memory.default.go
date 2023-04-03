@@ -1,18 +1,18 @@
 package repositories
 
 type MessageRepositoryInMemory struct {
-	values []any
+	values []int
 }
 
 func NewMessageRepositoryInMemory() *MessageRepositoryInMemory {
 	return &MessageRepositoryInMemory{}
 }
 
-func (repo *MessageRepositoryInMemory) Add(value any) {
+func (repo *MessageRepositoryInMemory) Add(value int) {
 	repo.values = append(repo.values, value)
 }
 
-func (repo *MessageRepositoryInMemory) Contains(value any) bool {
+func (repo *MessageRepositoryInMemory) Contains(value int) bool {
 	for _, v := range repo.values {
 		if v == value {
 			return true
@@ -22,6 +22,6 @@ func (repo *MessageRepositoryInMemory) Contains(value any) bool {
 	return false
 }
 
-func (repo *MessageRepositoryInMemory) Get() []any {
+func (repo *MessageRepositoryInMemory) Get() []int {
 	return repo.values
 }

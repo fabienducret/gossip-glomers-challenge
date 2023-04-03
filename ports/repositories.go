@@ -1,9 +1,9 @@
 package ports
 
 type MessageRepository interface {
-	Add(value any)
-	Contains(value any) bool
-	Get() []any
+	Add(value int)
+	Contains(value int) bool
+	Get() []int
 }
 
 type TopologyRepository interface {
